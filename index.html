@@ -32,30 +32,29 @@
             audio.currentTime = T;
             audio.play();
             }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            var time = 1;
+            
+            var time = 0;
 
             var interval = setInterval(function() {
                 if (time <= audio.duration) {
-                    time++;
                 localStorage.setItem("time", audio.currentTime);
                 /*alert(localStorage.getItem('time'));*/
                 }
 
             }, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             /*while (true){
