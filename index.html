@@ -11,13 +11,13 @@
             
             
             if (localStorage.getItem("time") == null) {
-                document.addEventListener('click', audioPlay);
+                /*document.addEventListener('click', audioPlay);
                 function audioPlay() {
-                    document.getElementById('music1').play();
-                    document.removeEventListener('click', audioPlay);
+                    document.getElementById("music1").play();
+                    document.removeEventListener('click', audioPlay);*/ 
                 }  
-               /* audio.currentTime = 0;
-                audio.play();*/                
+               audio.currentTime = 0;
+               audio.play();                
             }
             else {
                 // Set heading to the current value inside local storage
