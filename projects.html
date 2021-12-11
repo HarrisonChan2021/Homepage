@@ -5,21 +5,22 @@
 
         <script>
 
-        if (localStorage.getItem("time") == null) {
-
-            localStorage.setItem('time', 10);
-            alert('no');
-         }
-
-
-            // Set heading to the current value inside local storage
-            T = localStorage.getItem('time');
-            var audio = new Audio('music1.mp3');
-            audio.id = "music1";
-            audio.currentTime = T;
-            audio.loop = true;
-            audio.play();
-             /*alert(T);*/
+            if (localStorage.getItem("time") == null) {
+                /*document.addEventListener('click', audioPlay);
+                function audioPlay() {
+                    document.getElementById("music1").play();
+                    document.removeEventListener('click', audioPlay); 
+                }  */
+               audio.currentTime = 0;
+               audio.play();                
+            } else {
+                // Set heading to the current value inside local storage
+                T = localStorage.getItem("time");
+                audio.currentTime = T;
+                audio.loop = true;
+                audio.play();
+                 /*alert(T);*/
+            }
 
         /*function play() {
         var audio = new Audio('music1.mp3');
