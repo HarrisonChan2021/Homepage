@@ -3,25 +3,22 @@
 <html lang="en">
     <head>
         <script>
-
-            if (localStorage.getItem("time") == null) {
-
-                localStorage.setItem("time", 5);
-                
-             }
-
-
-            // Set heading to the current value inside local storage
-            T = localStorage.getItem("time");
-            alert(T);
+            
             var audio = new Audio('music1.mp3');
             audio.id = "music1";
-            audio.currentTime = T;
-            audio.loop = true;
-            audio.play();
-            audio.currentTime = T;
-             /*alert(T);*/
-
+            
+            if (localStorage.getItem("time") == null) {
+                audio.currentTime = 0;
+                audio.play();                
+             }
+            else {
+                // Set heading to the current value inside local storage
+                T = localStorage.getItem("time");
+                audio.currentTime = T;
+                audio.loop = true;
+                audio.play();
+                 /*alert(T);*/
+            }
             /*function play() {
             var audio = new Audio('music1.mp3');
             audio.id = "music1";
