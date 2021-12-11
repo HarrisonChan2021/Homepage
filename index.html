@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script>
+
+            if (localStorage.getItem("time") == null) {
+
+                localStorage.setItem('time', 10);
+                alert('no');
+             }
+
+
+                // Set heading to the current value inside local storage
+                T = localStorage.getItem('time');
+                var audio = new Audio('music1.mp3');
+                audio.id = "music1";
+                audio.currentTime = T;
+                audio.loop = true;
+                audio.play();
+                 /*alert(T);*/
+
+            /*function play() {
+            var audio = new Audio('music1.mp3');
+            audio.id = "music1";
+            audio.currentTime = T;
+            audio.play();
+            }*/
+
+
+
+
+
+
+
+
+
+
+            function checkSongTime(){
+            // code to check the current time of the song and to display it
+                var audio = new Audio('music1.mp3');
+                localStorage.setItem("time", audio.currentTime);
+
+
+            }
+
+
+
+            var time = 1;
+
+            var interval = setInterval(function() {
+                if (time <= audio.duration) {
+                    time++;
+                localStorage.setItem("time", audio.currentTime);
+                /*alert(localStorage.getItem('time'));*/
+                }
+
+            }, 1);
+
+
+            /*while (true){
+
+                localStorage.setItem("time", audio.currentTime);
+                console.log(localStorage.getItem('time'));
+            }*/
+
+
+
+
+
+        </script>
+
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+
+
+
+    <body>
+        <div class="jumbotron">
+            <h1>Harrison Chan</h1>
+            <h5>-automation thinker-</h5>
+            <h5>believing that 99% of repetitive tasks in any industries can automatically be completed by 2030</h5>
+            <hr>
+        </div>
+
+        <div class="buttons">
+        <button onclick="document.location='index.html'" id="Home">Home</button>
+        <button onclick="document.location='projects.html'" id="Projects">Projects</button>
+        <button onclick="document.location='Hobby.html'" id="Hobby">Hobby</button>
+        <button onclick="document.location='Skills.html'" id="Skills">Skills</button>
+        </div>
+
+
+
+        <!--<audio id="track" src="music1.mp3"
+            ontimeupdate="document.getElementById('tracktime').innerHTML = Math.floor(this.currentTime) + ' / ' + Math.floor(this.duration);">
+            <p>Your browser does not support the audio element</p>
+        </audio>
+        <span id="tracktime">0 / 0</span>
+        <button onclick="document.getElementById('track').play();">Play</button>-->
+
+
+        <div class="container">
+
+            <div class="section">
+                <h3><b>Welcome to my website! &#128540;</b></h3>
+                <hr>
+
+                <p>I'm Harrison, a thinker in data engineering, automation, data science. I graduated from <a href="https://www.kcl.ac.uk/" id="kcl">King's College London</a> in 2018 with a degree in mathematics with management and finance. Then, I completed my masters degree in statistics with data science from <a href="https://www.ed.ac.uk/" id="ed">University of Edinburgh</a> in 2019.<p>
+
+                 <p>I work for an oil trading company as a trading operator, where I develop projects focusing on report automation and data validation.<p>
+            </div>
+        </div>
+
+
+    </body>
+</html>

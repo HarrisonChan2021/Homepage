@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script>
+
+        if (localStorage.getItem("time") == null) {
+
+            localStorage.setItem('time', 10);
+            alert('no');
+         }
+
+
+            // Set heading to the current value inside local storage
+            T = localStorage.getItem('time');
+            var audio = new Audio('music1.mp3');
+            audio.id = "music1";
+            audio.currentTime = T;
+            audio.loop = true;
+            audio.play();
+            /*alert(T);*/
+
+        /*function play() {
+        var audio = new Audio('music1.mp3');
+        audio.id = "music1";
+        audio.currentTime = T;
+        audio.play();
+        }*/
+
+
+
+        var time = 0;
+
+        setInterval(function() {
+            if (time <= audio.duration) {
+                /*time++;*/
+            localStorage.setItem("time", audio.currentTime);
+            /*alert(localStorage.getItem('time'));*/
+            }
+        }, 1);
+
+
+        /*while (true){
+
+            localStorage.setItem("time", audio.currentTime);
+            console.log(localStorage.getItem('time'));
+        }*/
+
+
+
+
+
+        </script>
+
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My skills</title>
+    </head>
+
+
+
+    <body>
+        <div class="jumbotron">
+            <h1>Harrison Chan</h1>
+            <h5>-automation thinker-</h5>
+            <h5>believing that 99% of repetitive tasks in any industries can automatically be completed by 2030</h5>
+            <hr>
+        </div>
+
+        <div class="buttons">
+        <button onclick="document.location='index.html'" id="Home">Home</button>
+        <button onclick="document.location='projects.html'" id="Projects">Projects</button>
+        <button onclick="document.location='Hobby.html'" id="Hobby">Hobby</button>
+        <button onclick="document.location='Skills.html'" id="Skills">Skills</button>
+        </div>
+
+        <div class="container">
+            <div class="section">
+
+
+            <h3>Skills: &#x1F914;</h3>
+            <hr>
+
+            <div class="flex-container">
+
+                <div class="flex-child">
+                <!---<section class = "python">-->
+
+                    <div class="list_items">
+                        <h3><center>Python</center></h3>
+
+                    <hr />
+                    <ul>
+                        <li>Achieved 85% in <b>Python</b> programming course as part of my masters degree from the University of Edinburgh</li>
+                        <li>Used <b>Python</b> in Numerical And Computational Methods course from King's College London </li>
+                        <li>Completed the machine learning course from the University of Edinburgh with <b>Python</b> </li>
+                        <li>Planning to work on some data science and data engineering side projects in <b>Python</b></li>
+                    </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="flex-child">
+
+                    <div class="list_items">
+                    <h3><center>SQL</center></h3>
+
+                    <hr/>
+                    <ul>
+                        <li>Used <b>SQL</b> in several work related monthly reports</li>
+                        <li>Executed advanced queries on a <b>SQLite</b> database that stores data from IMDb about movies </li>
+
+
+                    </ul>
+                    </div>
+                </div>
+
+                <div class="flex-child">
+
+                    <div class="list_items">
+                    <h3><center>VBA</center></h3>
+
+                    <hr/>
+                    <ul>
+                        <li>Automated the process of generating daily and monthly reports with <b>VBA</b> and advanced excel formulas</li>
+                        <li>Used <b>VBA</b> to develop functions for data validation automatically </li>
+
+
+                    </ul>
+                    </div>
+                </div>
+             </div>
+             </div>
+        </div>
+
+
+
+
+
+
+    </body>
+</html>
