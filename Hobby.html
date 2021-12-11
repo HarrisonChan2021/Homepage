@@ -4,7 +4,12 @@
     <head>
 
         <script>
+            var audio = new Audio('music1.mp3');
+            audio.id = "music1";
 
+
+            
+            
             if (localStorage.getItem("time") == null) {
                 /*document.addEventListener('click', audioPlay);
                 function audioPlay() {
@@ -21,25 +26,21 @@
                 audio.play();
                  /*alert(T);*/
             }
+            /*function play() {
+            var audio = new Audio('music1.mp3');
+            audio.id = "music1";
+            audio.currentTime = T;
+            audio.play();
+            }*/
+            
+            /*var time = 0;*/
 
-        /*function play() {
-        var audio = new Audio('music1.mp3');
-        audio.id = "music1";
-        audio.currentTime = T;
-        audio.play();
-        }*/
-
-
-
-        var time = 0;
-
-        setInterval(function() {
-            if (time <= audio.duration) {
-                /*time++;*/
-            localStorage.setItem("time", audio.currentTime);
-            /*alert(localStorage.getItem('time'));*/
-            }
-        }, 1);
+            var interval = setInterval(function() {
+                /*if (time <= audio.duration) {
+                alert(localStorage.getItem('time'));
+                }*/
+                localStorage.setItem("time", audio.currentTime);
+            }, 1);
 
 
         /*while (true){
