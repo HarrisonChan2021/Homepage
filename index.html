@@ -13,6 +13,7 @@
 
             // Set heading to the current value inside local storage
             T = localStorage.getItem("time");
+            alert(T);
             var audio = new Audio('music1.mp3');
             audio.id = "music1";
             audio.currentTime = T;
@@ -36,13 +37,7 @@
 
 
 
-            function checkSongTime(){
-            // code to check the current time of the song and to display it
-                var audio = new Audio('music1.mp3');
-                localStorage.setItem("time", audio.currentTime);
 
-
-            }
 
 
 
