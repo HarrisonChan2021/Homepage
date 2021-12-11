@@ -11,6 +11,7 @@
             
             
             if (localStorage.getItem("time") == null) {
+                alert("no");
                 /*document.addEventListener('click', audioPlay);
                 function audioPlay() {
                     document.getElementById("music1").play();
@@ -21,6 +22,7 @@
             } else {
                 // Set heading to the current value inside local storage
                 T = localStorage.getItem("time");
+                alert(localStorage.getItem('time'));
                 audio.currentTime = T;
                 audio.loop = true;
                 audio.play();
@@ -33,14 +35,13 @@
             audio.play();
             }*/
             
-            var time = 0;
+            /*var time = 0;*/
 
             var interval = setInterval(function() {
-                if (time <= audio.duration) {
+                /*if (time <= audio.duration) {
+                alert(localStorage.getItem('time'));
+                }*/
                 localStorage.setItem("time", audio.currentTime);
-                /*alert(localStorage.getItem('time'));*/
-                }
-
             }, 1);
 
 
