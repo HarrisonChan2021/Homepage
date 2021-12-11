@@ -15,6 +15,7 @@
                 // Set heading to the current value inside local storage
                 T = localStorage.getItem("time");
                 audio.currentTime = T;
+                alert(audio.currentTime);
                 audio.loop = true;
                 audio.play();
                  /*alert(T);*/
